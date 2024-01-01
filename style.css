@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;500;800&display=swap');
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: rgba(52, 211, 153);
+    --black-color: #121212;
+
+    --poppins-font: 'Poppins', sans-serif;
+    --open-sans-font: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--open-sans-font);
+    background-color: var(--black-color);
+    color: white;
+}
+
+/* I dont know */
+
+.crazy-shit {
+    position: fixed;
+    left: -83%;
+    top: -50%;
+    z-index: -1;
+
+    height: 200%;
+    width: 100%;
+
+    transform: rotate(-15deg);
+    background-color: rgba(52, 211, 153, 0.8);
+}
+
+/* Navbar */
+
+#navbar {
+    width: 100vw;
+    height: 15vh;
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0px 50px;
+}
+
+#tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    font-weight: 200;
+    font-family: var(--poppins-font);
+}
+
+.tab {
+    height: 5vh;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0px 7.5px;
+    padding: 0px 7.5px;
+}
+
+.tab:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Main Section */
+
+#pfp-image {
+    display: none;
+}
+
+#main-section {
+    width: 100vw;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    box-sizing: border-box;
+    padding-right: 20vw;
+}
+
+#content {
+    width: 60%;
+}
+
+#heading-1 {
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: var(--poppins-font);
+    color: var(--primary-color)
+}
+
+#heading-2 {
+    font-size: 35px;
+    font-family: var(--poppins-font);
+
+    margin-bottom: 15px;
+}
+
+#content-paragraph {
+    width: 75%;
+    font-size: 16px;
+    color: lightgrey;
+    line-height: 30px;
+}
+
+#content-button {
+    margin: 25px 0px;
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+
+    background-color: rgba(0,0,0,0);
+    color: white;
+
+    font-family: var(--poppins-font);
+    font-size: 16px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.25s ease-in-out;
+}
+
+#content-button span {
+    padding: 15px 15px 15px 30px;
+}
+
+#button-svg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-button svg {
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    padding: 15px 15px;
+    color: white;
+}
+
+#content-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Media Query !IMPORTANT */
+
+@media only screen and (max-width: 800px) {
+    .crazy-shit {
+        display: none;
+    }
+
+    #navbar {
+        height: 15vh;
+        padding: 0px 20px;
+        justify-content: center;
+        border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+    }
+
+    #tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        font-size: 15px;
+        padding: 10px 7.5px;
+        text-align: center;
+    }
+
+    .tab:hover {
+        border: none;
+        background-color: var()
+    }
+
+    #pfp-image {
+        display: inline;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        outline: 4px solid var(--primary-color);
+        outline-offset: 5px;
+
+        margin-bottom: 20px;
+    }
+
+    #main-section {
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 20px;
+    }
+
+    #content {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #heading-1 {
+        font-size: 30px;
+        text-align: center
+    }
+
+    #heading-2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #content-paragraph {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        width: 60%;
+    }
+
+    #content-button {
+        font-size: 14px;
+
+    }
+
+    #content-button span {
+        padding: 7.5px 7.5px 7.5px 15px;
+    }
+}
